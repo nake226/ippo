@@ -1,5 +1,11 @@
 body {
   font-family: "YakuHanJPsLight", "proxima-nova", -apple-system, BlinkMacSystemFont, "Avenir Next", "Avenir", "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", sans-serif;
+  margin: 0 10px;
+}
+@media all and (max-width: 768px) {
+  body {
+    margin: auto;
+  }
 }
 /* header */
 header {
@@ -8,10 +14,23 @@ header {
   line-height: 100px;
   margin: auto;
 }
+@media all and (max-width: 768px) {
+  header {
+    margin: 0 3.125%;
+    height: 72px;
+    line-height: 72px;
+  }
+}
 header .logo {
   margin: auto;
   letter-spacing: 0.1em;
   font-size: 36px;
+}
+@media all and (max-width: 768px) {
+  header .logo {
+    font-size: 28px;
+    text-align: center;
+  }
 }
 /* footer */
 footer {
@@ -20,28 +39,69 @@ footer {
   height: 60px;
   line-height: 60px;
 }
+@media all and (max-width: 768px) {
+  footer {
+    margin: auto;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+  }
+}
 footer .copy {
   margin: auto 0;
+}
+@media all and (max-width: 768px) {
+  footer .copy {
+    font-size: 12px;
+  }
 }
 section {
   max-width: 1080px;
   margin: auto;
 }
+@media all and (max-width: 768px) {
+  section {
+    margin: 0 auto;
+  }
+}
 section:nth-of-type(n+2) {
   padding-top: 80px;
+}
+@media all and (max-width: 768px) {
+  section:nth-of-type(n+2) {
+    margin: 0 3.125%;
+    padding: 32px 0;
+    border-bottom: dashed 1px #333;
+  }
 }
 .container {
   margin: auto;
 }
 .container__title {
   letter-spacing: 0.1em;
-  font-size: 32px;
+  font-size: 24px;
+  margin: auto;
+}
+@media all and (max-width: 768px) {
+  .container__title {
+    margin: auto;
+    font-size: 24px;
+    text-align: center;
+  }
 }
 /* MV */
 #mv {
   background: url("../img/mv.jpg") no-repeat 0 -160px;
   min-height: 480px;
   background-size: cover;
+}
+@media all and (max-width: 768px) {
+  #mv {
+    background: url("../img/mv.jpg") no-repeat center center;
+    background-size: 120%;
+    min-height: 213px;
+    height: 66.567vw;
+  }
 }
 /* About */
 .about__text {
@@ -50,14 +110,27 @@ section:nth-of-type(n+2) {
   font-size: 20px;
   font-weight: bold;
 }
+@media all and (max-width: 768px) {
+  .about__text {
+    margin: 20px auto 0;
+    font-size: 14px;
+    font-weight: bold;
+  }
+}
 /* Service */
 .serviceList {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-content: center;
-  margin: auto;
+  margin: 32px auto 0;
   padding: 0;
   list-style: none;
+}
+@media all and (max-width: 768px) {
+  .serviceList {
+    margin: 28px auto 0;
+  }
 }
 .serviceList__item {
   width: 300px;
@@ -70,6 +143,16 @@ section:nth-of-type(n+2) {
   opacity: 1;
   transition: 0.3s;
 }
+@media all and (max-width: 768px) {
+  .serviceList__item {
+    margin: auto;
+  }
+}
+@media all and (max-width: 768px) {
+  .serviceList__item:nth-child(n+2) {
+    margin: 10px auto 0;
+  }
+}
 .serviceList__item:hover {
   cursor: pointer;
   opacity: 0.7;
@@ -79,9 +162,10 @@ section:nth-of-type(n+2) {
 /* Member */
 .memberList {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-content: center;
-  margin: auto;
+  margin: 32px auto 0;
   padding: 0;
   list-style: none;
 }
@@ -96,6 +180,16 @@ section:nth-of-type(n+2) {
   font-size: 24px;
   opacity: 1;
   transition: 0.3s;
+}
+@media all and (max-width: 768px) {
+  .memberList__item {
+    margin: auto;
+  }
+}
+@media all and (max-width: 768px) {
+  .memberList__item:nth-child(n+2) {
+    margin: 10px auto 0;
+  }
 }
 .memberList__item:hover {
   background: rgba(0,0,0,0.85);
