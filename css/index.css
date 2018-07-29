@@ -1,7 +1,6 @@
 body {
   font-family: "YakuHanJPsLight", "proxima-nova", -apple-system, BlinkMacSystemFont, "Avenir Next", "Avenir", "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", sans-serif;
 }
-
 /* header */
 header {
   max-width: 1080px;
@@ -14,7 +13,6 @@ header .logo {
   letter-spacing: 0.1em;
   font-size: 36px;
 }
-
 /* footer */
 footer {
   max-width: 1080px;
@@ -25,7 +23,6 @@ footer {
 footer .copy {
   margin: auto 0;
 }
-
 section {
   max-width: 1080px;
   margin: auto;
@@ -40,14 +37,12 @@ section:nth-of-type(n+2) {
   letter-spacing: 0.1em;
   font-size: 32px;
 }
-
 /* MV */
 #mv {
-  background: url(../img/mv.jpg)no-repeat 0 -160px;
+  background: url("../img/mv.jpg") no-repeat 0 -160px;
   min-height: 480px;
   background-size: cover;
 }
-
 /* About */
 .about__text {
   margin: 32px auto 0;
@@ -55,7 +50,6 @@ section:nth-of-type(n+2) {
   font-size: 20px;
   font-weight: bold;
 }
-
 /* Service */
 .serviceList {
   display: flex;
@@ -69,20 +63,19 @@ section:nth-of-type(n+2) {
   width: 300px;
   height: 300px;
   line-height: 300px;
-  background: #dddddd;
+  background: #ddd;
   text-align: center;
   letter-spacing: 0.1em;
   font-size: 24px;
   opacity: 1;
-  transition: .3s;
+  transition: 0.3s;
 }
 .serviceList__item:hover {
   cursor: pointer;
   opacity: 0.7;
   transform: scale(1.02);
-  transition: .3s;
+  transition: 0.3s;
 }
-
 /* Member */
 .memberList {
   display: flex;
@@ -102,13 +95,13 @@ section:nth-of-type(n+2) {
   letter-spacing: 0.1em;
   font-size: 24px;
   opacity: 1;
-  transition: .3s;
+  transition: 0.3s;
 }
 .memberList__item:hover {
   background: rgba(0,0,0,0.85);
   cursor: pointer;
   transform: scale(1.02);
-  transition: .3s;
+  transition: 0.3s;
 }
 .memberList__item__name {
   margin: auto;
@@ -118,11 +111,11 @@ section:nth-of-type(n+2) {
   top: 0;
   bottom: 0;
   height: 28px;
-  transition: .3s;
+  transition: 0.3s;
 }
 .memberList__item:hover .memberList__item__name {
   transform: translate(0, -90px);
-  transition: .3s;
+  transition: 0.3s;
 }
 .memberList__item__profile {
   margin: auto;
@@ -130,7 +123,7 @@ section:nth-of-type(n+2) {
   transform: scale(0);
 }
 .memberList__item:hover .memberList__item__profile {
-  display: block; 
+  display: block;
   margin: auto;
   position: absolute;
   right: 0;
@@ -140,7 +133,7 @@ section:nth-of-type(n+2) {
   height: 23px;
   font-size: 16px;
   transform: scale(1);
-  transition: .3s;
+  transition: 0.3s;
   opacity: 1;
 }
 .memberList__item__role {
