@@ -91,13 +91,13 @@ section:nth-of-type(n+2) {
 }
 /* MV */
 #mv {
-  background: url("../img/mv.jpg") no-repeat 0 -160px;
+  background: url("../img/img_mv.jpg") no-repeat 0 -160px;
   min-height: 480px;
   background-size: cover;
 }
 @media all and (max-width: 768px) {
   #mv {
-    background: url("../img/mv.jpg") no-repeat center center;
+    background: url("../img/img_mv.jpg") no-repeat center center;
     background-size: 120%;
     min-height: 213px;
     height: 66.567vw;
@@ -133,15 +133,21 @@ section:nth-of-type(n+2) {
   }
 }
 .serviceList__item {
+  position: relative;
   width: 300px;
   height: 300px;
-  line-height: 300px;
   background: #ddd;
   text-align: center;
   letter-spacing: 0.1em;
   font-size: 24px;
   opacity: 1;
   transition: 0.3s;
+}
+.serviceList__item:first-child::after {
+  display: block;
+  content: "";
+  background: url("../img/icon_tkg.png") no-repeat;
+  background-size: 100%;
 }
 @media all and (max-width: 768px) {
   .serviceList__item {
@@ -154,10 +160,33 @@ section:nth-of-type(n+2) {
   }
 }
 .serviceList__item:hover {
-  cursor: pointer;
   opacity: 0.7;
   transform: scale(1.02);
   transition: 0.3s;
+}
+.serviceList__item__name {
+  margin: 24px auto 0;
+}
+.serviceList__item__description {
+  font-size: 13px;
+  font-weight: bold;
+  margin: 16px auto 0;
+  text-align: center;
+}
+.serviceList__item__icon {
+  display: block;
+  width: 60px;
+  height: 60px;
+  margin: 16px auto 0;
+  border-radius: 15px;
+}
+.serviceList__item__link {
+  display: inline-block;
+  margin: 16px auto 0;
+  font-size: 0;
+}
+.serviceList__item__link:hover {
+  cursor: pointer;
 }
 /* Member */
 .memberList {
