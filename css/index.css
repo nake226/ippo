@@ -1,3 +1,4 @@
+/* layout */
 body {
   font-family: "YakuHanJPsLight", "proxima-nova", -apple-system, BlinkMacSystemFont, "Avenir Next", "Avenir", "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", sans-serif;
   margin: 0;
@@ -7,12 +8,59 @@ body {
     margin: auto;
   }
 }
+section {
+  margin: auto;
+}
+@media all and (max-width: 768px) {
+  section {
+    margin: 0 auto;
+  }
+}
+section:nth-of-type(n+2) {
+  padding: 80px 0;
+}
+@media all and (max-width: 768px) {
+  section:nth-of-type(n+2) {
+    margin: 0 3.125%;
+    padding: 32px 0;
+    border-bottom: dashed 1px #333;
+  }
+}
+.container {
+  max-width: 1080px;
+  margin: auto;
+  padding: 0 60px
+}
+.container__title {
+  letter-spacing: 0.1em;
+  font-size: 24px;
+  margin: auto;
+  position: relative;
+}
+.container__title::after {
+  display: block;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border: solid 6px #aaf;
+  width: 90px;
+  z-index: 1;
+  opacity: 0.3;
+}
+@media all and (max-width: 768px) {
+  .container__title {
+    margin: auto;
+    font-size: 24px;
+    text-align: center;
+  }
+}
 /* header */
 header {
   max-width: 1080px;
   height: 100px;
   line-height: 100px;
-  margin: auto;
+  margin: 0;
 }
 @media all and (max-width: 768px) {
   header {
@@ -53,52 +101,6 @@ footer .copy {
 @media all and (max-width: 768px) {
   footer .copy {
     font-size: 12px;
-  }
-}
-section {
-  margin: auto;
-}
-@media all and (max-width: 768px) {
-  section {
-    margin: 0 auto;
-  }
-}
-section:nth-of-type(n+2) {
-  padding: 80px 0;
-}
-@media all and (max-width: 768px) {
-  section:nth-of-type(n+2) {
-    margin: 0 3.125%;
-    padding: 32px 0;
-    border-bottom: dashed 1px #333;
-  }
-}
-.container {
-  max-width: 1080px;
-  margin: auto;
-}
-.container__title {
-  letter-spacing: 0.1em;
-  font-size: 24px;
-  margin: auto;
-  position: relative;
-}
-.container__title::after {
-  display: block;
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  border: solid 6px #aaf;
-  width: 90px;
-  z-index: 1;
-  opacity: 0.3;
-}
-@media all and (max-width: 768px) {
-  .container__title {
-    margin: auto;
-    font-size: 24px;
-    text-align: center;
   }
 }
 /* MV */
@@ -151,13 +153,12 @@ section:nth-of-type(n+2) {
   position: relative;
   width: 300px;
   height: 300px;
-  background: #eff;
+  background: #fff;
   text-align: center;
   letter-spacing: 0.1em;
   font-size: 24px;
   opacity: 1;
   transition: 0.3s;
-  border: solid 2px #333;
   border-radius: 6px;
 }
 .serviceList__item:first-child::after {
@@ -197,6 +198,7 @@ section:nth-of-type(n+2) {
   width: 60px;
   height: 60px;
   margin: 16px auto 0;
+  border: solid 1px #ccc;
   border-radius: 15px;
 }
 .serviceList__item__link {
