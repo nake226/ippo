@@ -54,10 +54,13 @@ section:nth-of-type(n+2) {
     font-size: 24px;
     text-align: center;
   }
+  .container__title::after {
+    right: 0;
+    margin: auto;
+  }
 }
 /* header */
 header {
-  max-width: 1080px;
   height: 100px;
   line-height: 100px;
   margin: 0;
