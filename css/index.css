@@ -26,7 +26,7 @@ section:nth-of-type(n+2) {
   }
 }
 .container {
-  max-width: 1080px;
+  max-width: 980px;
   margin: auto;
   padding: 0 60px;
 }
@@ -130,8 +130,8 @@ footer .copy {
 /* About */
 #about .about__text {
   margin: 32px auto 0;
-  line-height: 1.5;
-  font-size: 20px;
+  line-height: 1.9;
+  font-size: 18px;
   font-weight: bold;
 }
 @media all and (max-width: 768px) {
@@ -161,8 +161,10 @@ footer .copy {
 }
 #service .serviceList__item {
   position: relative;
-  width: 300px;
-  height: 300px;
+  width: 30%;
+  max-width: 300px;
+  height: auto;
+  padding: 20px 0;
   background: #fff;
   text-align: center;
   letter-spacing: 0.1em;
@@ -187,11 +189,12 @@ footer .copy {
   transition: 0.3s;
 }
 #service .serviceList__item__name {
-  margin: 24px auto 0;
-  font-size: 20px;
+  margin: 0 auto;
+  font-size: 18px;
   font-weight: bold;
 }
 #service .serviceList__item__description {
+  display: none;
   font-size: 13px;
   font-weight: bold;
   margin: 16px auto 0;

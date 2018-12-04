@@ -1,0 +1,197 @@
+@import '_base'
+// layout
+body
+  font-family: "YakuHanJPsLight", "proxima-nova", -apple-system, BlinkMacSystemFont, "Avenir Next", "Avenir", "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", sans-serif;
+  margin: 0;
+  +sp()
+    margin: auto;
+section
+  margin: auto
+  +sp()
+    margin: 0 auto;
+  &:nth-of-type(n+2)
+    padding: 80px 0;
+    +sp()
+      margin: 0 3.125%;
+      padding: 32px 0;
+      border-bottom: dashed 1px #333;
+.container
+  max-width: 980px;
+  margin: auto;
+  padding: 0 60px
+  +sp()
+    padding: 0 10px;
+  &__title
+    letter-spacing: 0.1em;
+    font-size: 24px;
+    margin: auto;
+    position: relative;
+    &::after
+      display: block;
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      border: solid 6px #aaf;
+      width: 90px;
+      z-index: 1;
+      opacity: 0.3;
+    &.member
+      &::after
+        border: solid 6px #F44949;
+    +sp()
+      margin: auto;
+      font-size: 24px;
+      text-align: center;
+      &::after
+        right: 0;
+        margin: auto;
+/* header */
+header
+  height: 100px;
+  line-height: 100px;
+  margin: 0;
+  +sp()
+    margin: 0 3.125%;
+    height: 72px;
+    line-height: 72px;
+  .logo
+    margin: auto;
+    letter-spacing: 0.1em;
+    font-size: 36px;
+    +sp()
+      font-size: 28px;
+      text-align: center;
+/* footer */
+footer
+  max-width: 1080px;
+  margin: 60px auto 0;
+  height: 60px;
+  line-height: 60px;
+  +sp()
+    margin: auto;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+  .copy
+    margin: auto 0;
+    +sp()
+      font-size: 12px;
+/* MV */
+#mv
+  background: url("../img/img_mv.jpg") no-repeat 0 -160px;
+  min-height: 480px;
+  background-size: cover;
+  +sp()
+    background: url("../img/img_mv.jpg") no-repeat center center;
+    background-size: 120%;
+    min-height: 213px;
+    height: 66.567vw;
+/* About */
+#about
+  .about
+    &__text
+      margin: 32px auto 0;
+      line-height: 1.9;
+      font-size: 18px;
+      font-weight: bold;
+      +sp()
+        margin: 20px auto 0;
+        font-size: 14px;
+        font-weight: bold;
+/* Service */
+#service
+  background: #f0f8ff;
+  .serviceList
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: center;
+    margin: 32px auto 0;
+    padding: 0;
+    list-style: none;
+    +sp()
+      margin: 28px auto 0;
+    &__item
+      position: relative;
+      width: 30%;
+      max-width: 300px
+      height: auto;
+      padding: 20px 0;
+      background: #fff;
+      text-align: center;
+      letter-spacing: 0.1em;
+      font-size: 24px;
+      opacity: 1;
+      transition: 0.3s;
+      border-radius: 6px;
+      +sp()
+        margin: auto;
+      &:nth-child(n+2)
+        +sp()
+          margin: 10px auto 0;
+      &:hover
+        opacity: 0.7;
+        transform: scale(1.02);
+        transition: 0.3s;
+      &__name
+        margin: 0 auto;
+        font-size: 18px;
+        font-weight: bold;
+      &__description
+        display none
+        font-size: 13px;
+        font-weight: bold;
+        margin: 16px auto 0;
+        text-align: center;
+      &__icon
+        display: block;
+        width: 60px;
+        height: 60px;
+        margin: 16px auto 0;
+        border: solid 1px #ccc;
+        border-radius: 15px;
+      &__link
+        display: inline-block;
+        width: 140px;
+        margin: 20px auto 0;
+        font-size: 0;
+        &:hover
+          cursor: pointer;
+      &__bnr
+        width: 100%;
+/* Member */
+#member
+  background #F7F7F7
+  .memberList
+    display flex
+    justify-content: space-between
+    margin: 32px auto 0
+    padding: 0
+    &__item
+      box-sizing: border-box
+      width: 300px;
+      height: 300px;
+      padding: 16px 12px
+      position: relative;
+      background: #fff;
+      list-style: none
+      color: #333;
+      text-align: center;
+      letter-spacing: 0.1em;
+      font-size: 24px;
+      opacity: 1;
+      transition: 0.3s;
+      &:hover
+        background: rgba(255,255,255,0.75);
+        cursor: pointer;
+        transform: scale(1.02);
+        transition: 0.3s;
+      +sp()
+        margin: auto;
+        &:nth-child(n+2)
+          margin: 10px auto 0;
+      &__name
+        margin: auto;
+      &__role
+        margin: auto
