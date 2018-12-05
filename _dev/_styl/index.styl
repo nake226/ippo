@@ -1,5 +1,12 @@
 @import '_base'
 // layout
+.pc
+  +sp()
+    display none
+.sp
+  display none
+  +sp()
+    display block
 body
   font-family: "YakuHanJPsLight", "proxima-nova", -apple-system, BlinkMacSystemFont, "Avenir Next", "Avenir", "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", sans-serif;
   margin: 0;
@@ -12,9 +19,7 @@ section
   &:nth-of-type(n+2)
     padding: 80px 0;
     +sp()
-      margin: 0 3.125%;
       padding: 32px 0;
-      border-bottom: dashed 1px #333;
 .container
   max-width: 980px;
   margin: auto;
@@ -53,14 +58,14 @@ header
   margin: 0;
   +sp()
     margin: 0 3.125%;
-    height: 72px;
-    line-height: 72px;
+    height: 52px;
+    line-height: 52px;
   .logo
     margin: auto;
     letter-spacing: 0.1em;
     font-size: 36px;
     +sp()
-      font-size: 28px;
+      font-size: 24px;
       text-align: center;
 /* footer */
 footer
@@ -99,6 +104,7 @@ footer
         margin: 20px auto 0;
         font-size: 14px;
         font-weight: bold;
+        text-align: left;
 /* Service */
 #service
   background: #f0f8ff;
@@ -126,6 +132,8 @@ footer
       transition: 0.3s;
       border-radius: 6px;
       +sp()
+        width: 100%
+        max-width: 400px
         margin: auto;
       &:nth-child(n+2)
         +sp()
